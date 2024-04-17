@@ -1,5 +1,5 @@
 ////////////////////// ASIGNACIONES ///////////////////
-interface Tarea  {
+/*interface Tarea  {
     nombreTarea: string,
     estaPendiente : boolean,
     prioridad: "Alta" | "Media" | "Baja",
@@ -65,7 +65,7 @@ const personas : Usuario[] =[
         nombre: "Alan",
         tarea: tareasUsuario,
     },
-]
+]*/
 
 /*function mostrarTareasUsuarios (personas : Usuario[])  {
     personas.map(persona => {
@@ -113,7 +113,7 @@ console.log(mostrarTareasUsuarios(personas))*/
      console.log(`${tarea.nombreTarea} - PENDIENTE - Prioridad: ${tarea.prioridad}`);
  });*/
 
-
+/*
  function mostrarTareasDePersonaConMap(nombre: string, personas: Usuario[]) {
     const persona = personas.find(persona => persona.nombre === nombre);
 
@@ -127,8 +127,128 @@ console.log(mostrarTareasUsuarios(personas))*/
 }
 
 // Ejemplo de uso:
-mostrarTareasDePersonaConMap("Alan", personas);
+mostrarTareasDePersonaConMap("Alan", personas); */
 
 //// ¡¡¡¡armar la estructura del map!!!! //// REHACER
+
+namespace trello {
+    interface Tarea  {
+        nombreTarea: string,
+        estaPendiente : boolean,
+        prioridad: "Alta" | "Media" | "Baja",
+    }
+    
+    const valorPrioridad ={
+        "Alta": 1,
+        "Media": 2,
+        "Baja": 3,
+    }
+    interface Usuario{
+            nombre: string,
+            tarea: Tarea[]
+    }
+    
+    const personas : Usuario[] =[
+        {
+            nombre: "Juan",
+            tarea: [
+                {
+                    nombreTarea: "Tengo que entregar el tp1 de prog",
+                    estaPendiente: true,
+                    prioridad: "Alta"
+                },
+                {
+                    nombreTarea: "Darle de comer a Mushito",
+                    estaPendiente: true,
+                    prioridad: "Baja"
+                },
+                {
+                    nombreTarea: "Lavar el mate",
+                    estaPendiente: true,
+                    prioridad: "Media"
+                },
+                {
+                    nombreTarea: "Ir a comprar espirales",
+                    estaPendiente: false,
+                    prioridad: "Media"
+                },
+                {
+                    nombreTarea: "Ir a comprar una birrita",
+                    estaPendiente: true,
+                    prioridad: "Media"
+                },
+            ],
+        },
+    
+        {
+            nombre: "Cyrene",
+            tarea: [
+                {
+                    nombreTarea: "Tengo que entregar el tp1 de prog",
+                    estaPendiente: true,
+                    prioridad: "Alta"
+                },
+                {
+                    nombreTarea: "Darle de comer a Mushito",
+                    estaPendiente: true,
+                    prioridad: "Baja"
+                },
+                {
+                    nombreTarea: "Lavar el mate",
+                    estaPendiente: true,
+                    prioridad: "Media"
+                },
+                {
+                    nombreTarea: "Ir a comprar espirales",
+                    estaPendiente: false,
+                    prioridad: "Media"
+                },
+                {
+                    nombreTarea: "Ir a comprar una birrita",
+                    estaPendiente: true,
+                    prioridad: "Media"
+                },
+            ],
+        },
+ 
+    ]
+
+    var tareasPorPersona = new Map <string, Tarea[]>();
+
+    tareasPorPersona.set(
+        "Juan",
+        [
+            {
+                nombreTarea: "Tengo que entregar el tp1 de prog",
+                estaPendiente: true,
+                prioridad: "Alta"
+            },
+            {
+                nombreTarea: "Darle de comer a Mushito",
+                estaPendiente: true,
+                prioridad: "Baja"
+            },
+            {
+                nombreTarea: "Lavar el mate",
+                estaPendiente: true,
+                prioridad: "Media"
+            },
+            {
+                nombreTarea: "Ir a comprar espirales",
+                estaPendiente: false,
+                prioridad: "Media"
+            },
+            {
+                nombreTarea: "Ir a comprar una birrita",
+                estaPendiente: true,
+                prioridad: "Media"
+            }
+        ]
+    );
+
+    console.log(tareasPorPersona.get("Juan"));
+
+}
+
 
 
