@@ -119,9 +119,7 @@ function buscarTareasPendientes (tareas : Tarea[]) : Tarea[] {
 
     if (persona) {
         console.log(`Tareas de ${persona.nombre}:`);
-        const tareasInfo = persona.tarea.map(tarea => 
-            `Tarea: ${tarea.nombreTarea}, Pendiente: ${tarea.estaPendiente ? 'Sí' : 'No'}, Prioridad: ${tarea.prioridad}`
-        ).join("\n");
+        const tareasInfo = persona.tarea.map(tarea => `Tarea: ${tarea.nombreTarea}`);
         console.log(tareasInfo);
     } else {
         console.log('Persona no encontrada.');
