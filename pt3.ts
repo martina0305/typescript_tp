@@ -86,13 +86,13 @@ console.log(mostrarTareasUsuarios(personas))*/
 
 //console.log(buscarPersona(personas));
 
-function buscarTareasPendientes (tareas : Tarea[]) : Tarea[] {
+/*function buscarTareasPendientes (tareas : Tarea[]) : Tarea[] {
     /*for(var i = 0; i < tareas.length; i++){
  
          if(tareas[i].estaPendiente === true){
               return tareas[i].nombreTarea +" - "+"PENDIENTE";
          }
-     }*/
+     }
  
      return tareas.filter(tarea => tarea.estaPendiente);
  }
@@ -128,3 +128,7 @@ function buscarTareasPendientes (tareas : Tarea[]) : Tarea[] {
 
 // Ejemplo de uso:
 mostrarTareasDePersonaConMap("Alan", personas);
+
+//// ¡¡¡¡armar la estructura del map!!!! //// REHACER
+
+
