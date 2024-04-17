@@ -129,4 +129,6 @@ console.log(mostrarTareasUsuarios(personas))*/
 // Ejemplo de uso:
 mostrarTareasDePersonaConMap("Alan", personas);
 
-//// ¡¡¡¡armar la estructura del map!!!! ////
+//// ¡¡¡¡armar la estructura del map!!!! //// REHACER
+
+
